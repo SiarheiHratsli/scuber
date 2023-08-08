@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Вы успешно вошли в свой аккаунт
+{% endblock %}
+
+{% block body %}
+<div class="profile">
+    <h1 class="title_text_profile">Профиль</h1>
+        <div class="background-profile">
+
+            <img class="profile_img" src="{{ url_for('static', filename='images/profile.png') }}" alt="My Image">
+            <p class="profile_name">{{username}}</p>
+            <p class="email_text_profile">{{ email }}</p>
+        </div>
+
+{#        <a id="but4" href="/" >Выйти</a>#}
+{#href="/" id="but4" class="btn btn-primary"#}
+</div>
+{% endblock %}

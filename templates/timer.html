@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Секундомер</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Секундомер</h1>
+    <p id="timer">00.00</p>
+
+    <script>
+        $(document).ready(function() {
+        var running = false;
+        var startTime;
+        var interval;
+
+        function formatTime(elapsedTime) {
+            var minutes = Math.floor(elapsedTime / 60000);
+            var seconds = Math.floor((elapsedTime % 60000) / 1000);
+            var milliseconds = Math.floor((elapsedTime % 1000) / 10);
+
+            if (minutes > 0) {
+                return (minutes < 10 ? "0" : "") + minutes + ":" +
+                    (seconds < 10 ? "0" : "") + seconds + ":" +
+                    (milliseconds < 10 ? "0" : "") + milliseconds;
+            } else {
+                return (seconds < 10 ? "0" : "") + seconds + "." +
+                    (milliseconds < 10 ? "0" : "") + milliseconds;
+            }
+        }
+
+        function startTimer() {
+            startTime = new Date().getTime();
+            interval = setInterval(function() {
+                var currentTime = new Date().getTime();
+                var elapsedTime = currentTime - startTime;
+                $("#timer").text(formatTime(elapsedTime));
+            }, 10);
+            running = true;
+        }
+
+        function stopTimer() {
+            clearInterval(interval);
+            running = false;
+        }
+
+        $(document).keydown(function(event) {
+            if (event.keyCode === 32) { // Код клавиши пробела
+                event.preventDefault(); // Предотвращаем прокрутку страницы при нажатии пробела
+                if (running) {
+                    stopTimer();
+                } else {
+                    startTimer();
+                }
+            }
+        });
+    });
+
+    </script>
+</body>
+</html>

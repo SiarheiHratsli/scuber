@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Регистрация
+{% endblock %}
+
+{% block body %}
+    {% for ms in get_flashed_messages() %}
+        <div class="compleate">{{ms}}</div>
+    {% endfor %}
+<div class="container">
+    <h1>Регистрация</h1>
+    <form method="post">
+        <p>Имя пользователя:</p>
+        <input type="text" name="username" id="title" class="form-control" placeholder="Введите имя пользователя" maxlength="15" required><br>
+        <p>Адрес e-mail:</p>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Введите адрес e-mail" required></input><br>
+        <p>Пароль:</p>
+        <input type="password" name="password" id="password" class="form-control" placeholder="Введите пароль" required></input><br>
+        <p>Подтверждение пароля:</p>
+        <input type="password" name="password1" id="password1" class="form-control" placeholder="Введите пароль" required></input><br>
+        <input type="submit" id="btn" class="btn btn-outline-success" value="Зарегистрироваться">
+    <div class="login_text">
+        <p>Есть уже аккаунт?</p>
+    </div>
+        <a href="/login">Войти</a>
+    </form>
+</div>
+{% endblock %}

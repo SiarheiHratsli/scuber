@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Данные пользователей
+{% endblock %}
+
+{% block body %}
+    <h1>Данные пользователей</h1>
+
+    {% for el in articles %}
+    <div class="alert-info">
+        <p>{{ el.username }}</p>
+        <p>{{ el.email }}</p>
+        <p>{{ el.password }}</p>
+        <p>{{ el.date.date() }}</p>
+    </div>
+    {% endfor %}
+{% endblock %}

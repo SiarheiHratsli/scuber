@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Вход
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Вход</h1>
+    <form method="post">
+        <p>Адрес email:</p>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Введите email" required></input><br>
+        <p>Пароль:</p>
+        <input type="password" name="password" id="password" class="form-control" placeholder="Введите пароль" required></input><br>
+        <input type="submit" id="btn" class="btn btn-outline-success" value="Войти">
+        <div class="login_text">
+            <p>Нет аккаунта?</p>
+        </div>
+        <a href="/signup">Зарегистрироваться</a>
+    </form>
+</div>
+{% endblock %}

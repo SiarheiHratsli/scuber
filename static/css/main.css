@@ -1,0 +1,465 @@
+/* Reset and base styles  */
+
+@font-face {
+    font-family: 'SF Pro Rounded';
+    src: url('/static/fonts/SF-Pro-Rounded-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SF Pro';
+    src: url('/static/fonts/SFPRODISPLAYREGULAR.OTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('/static/fonts/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Ubuntu Mono';
+    src: url('/static/fonts/UbuntuMono-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SF mono';
+    src: url('/static/fonts/SFMonoMedium.otf') format('opentype');
+}
+
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Links */
+
+a, a:link, a:visited  {
+    text-decoration: none;
+}
+
+aside, nav, footer, header, section, main {
+	display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+	font-weight: inherit;
+}
+
+ul, ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+img, svg {
+	max-width: 100%;
+	height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+
+input, textarea, button, select {
+	font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button, input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+label {
+	cursor: pointer;
+}
+
+legend {
+	display: block;
+}
+
+
+body {
+    background-color: #FEFEE3;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #161216;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 1000;
+}
+
+/*.signup {*/
+/*    color: #EEFCFC;*/
+/*    font-size: 22px;*/
+/*    font-family: SF Pro, "arial", sans-serif;*/
+/*    font-weight: 650;*/
+/*}*/
+
+
+.logo_place {
+    position: absolute;
+    top: 19px;
+    left: 47px;
+    color: #EEFCFC;
+    font-size: 36px;
+    font-family: SF Pro, "arial", sans-serif;
+    font-weight: 650;
+    line-height: normal;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo {
+    color: #2A9134;
+}
+
+.logo_place:hover {
+    color: #2A9134;
+}
+
+.logo_place:active {
+    color: #22742a;
+}
+
+/*.logo {*/
+/*  color: #2A9134;*/
+/*  transition: background-color 0.3s ease;*/
+/*}*/
+
+/*.logo_place:hover .logo {*/
+/*  background-color: #2A9134;*/
+/*}*/
+
+/*.logo_place:active .logo {*/
+/*  background-color: #8f9797;*/
+/*}*/
+
+
+.a {
+    margin-top: 80px;
+}
+
+/*.sign_place {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    margin-right: 10px;*/
+/*    height: 40px;*/
+/*    width: 150px;*/
+/*    background-color: #37718E;*/
+/*    border-radius: 10px;*/
+/*}*/
+
+#title, #email, #password {
+    width: 33vh;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title_text_profile {
+    color: rgba(0, 0, 0, 0.85);
+    font-family: SF Pro Rounded;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.profile {
+    position: absolute;
+    left: 55%;
+    top: 15%;
+    transform: translate(-50%);
+    border-radius: 30px;
+    width: 80%;
+    height: 90%;
+}
+
+.background-profile {
+    position: absolute;
+    border-radius: 30px;
+    width: 250px;
+    height: 400px;
+    background-color: #EBEBEB;
+    outline-style: solid;
+    outline-color: #212428;
+    outline-width: thin;
+
+}
+
+.profile_img {
+    margin-top: 30px;
+    height: auto;
+    width: 50%;
+}
+
+.profile_name {
+    margin-top: 30px;
+    color: rgba(0, 0, 0, 0.85);
+    font-family: SF Pro Rounded;
+    font-size:20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+#but4 {
+    border-radius: 20px;
+    /*background-color: #C90000;*/
+    /*border-color: #C90000;*/
+    color: #C90000;
+    width: auto;
+    height: auto;
+    font-size: 14px;
+}
+.email_text_profile {
+    color: rgba(0, 0, 0, 0.51);
+    font-family: SF Pro Rounded;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.btn_profile {
+    margin-bottom: 49px;
+}
+
+.horizontal-line {
+    height: 1px;
+    background-color: #000;
+}
+
+
+.sign_place:hover {
+    background-color: #4b7f99
+}
+
+.about:hover {
+    color: #9bb8c7;
+}
+
+.time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    color: #254E70;
+    font-size: 150px;
+    font-family: "OpenSans", monospace;
+    font-style: normal;
+    font-weight: 510;
+}
+
+.scramble {
+ white-space: nowrap;
+    text-align: center;
+    color: #2A9134;
+    font-size: 36px;
+    font-family: SF Pro, "arial", sans-serif;
+    font-weight: 700;
+    margin-top: 120px;
+}
+
+.show {
+    font-size: 18px;
+    font-family: SF Pro, "arial", sans-serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed
+}
+
+table th,
+table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+.table td:nth-child(1) {
+    background-color: #dadada;
+}
+
+.table td:nth-child(3) {
+    background-color: #dadada;
+}
+
+/*.auth {*/
+/*    align-items: center;*/
+/*    color: white;*/
+/*    font-size: 26px;*/
+/*    font-family: SF Pro, "arial", sans-serif;*/
+/*    font-weight: 650;*/
+/*}*/
+
+
+/*.auth_button a:hover {*/
+/*    background-color: #f9d674;*/
+/*}*/
+
+/*.auth_button a:active {*/
+/*    background-color: #ffe9d9;*/
+/*}*/
+
+.compleate {
+    margin-top: 10px;
+    background-color: rgba(40, 231, 47, 0.3);
+    height: 40px;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+    font-family: SF Pro, "arial", sans-serif;
+    font-weight: 450;
+}
+
+.login_text {
+    margin-top: 15px;
+}
+
+input:valid  {
+  border-color: green;
+}
+
+/*.auth_button {*/
+/*    text-align: center;*/
+/*    align-items: center;*/
+/*    height: 40px;*/
+/*    width: 180px;*/
+/*    margin-right: 20px;*/
+/*    border-radius: 10px;*/
+/*    background-color: #F7CC51;*/
+/*    font-size: 26px;*/
+/*    font-family: SF Pro, "arial", sans-serif;*/
+/*    font-weight: 650;*/
+/*}*/
+
+.button1 {
+    font-size: 20px;
+    padding: 10px 10px;
+    font-family: SF Pro, "arial", sans-serif;
+    margin-right: 20px;
+    border-radius: 10px;
+    background-color: #161216;
+    color: white;
+    border: 2px solid #4CAF50;
+    transition: background-color 0.4s ease
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button1:active {
+    border: 2px solid #3d8c40;
+    background-color: #3d8c40;
+    color: white;
+}
+
+.btn.btn-outline-success {
+  --bs-btn-hover-bg: #4CAF50;
+  --bs-btn-hover-border-color: #4CAF50;
+  --bs-btn-active-bg: #3d8c40;
+  --bs-btn-active-border-color: #3d8c40;
+}
+
+/*.icon img{*/
+/*    position: absolute;*/
+/*    white-space: nowrap;*/
+/*    top: 55%;*/
+/*    left: 40%;*/
+/*    transform: translate(-50%, -50%);*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    fill: red;*/
+/*    width: 32px;*/
+/*    height: 32px;*/
+/*}*/
+
+.tools {
+    position: absolute;
+    white-space: nowrap;
+    top: 57%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    font-size: 40px;
+    font-family: SF Pro, "arial", sans-serif;
+    font-weight: 510;
+    margin-right: 20px;
+}
+
+.time {
+    position: absolute;
+    white-space: nowrap;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+
+}
+
+.button {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#but1 {
+    color: #37718E;
+}
+
+#but2 {
+    color: #C33C54;
+}
